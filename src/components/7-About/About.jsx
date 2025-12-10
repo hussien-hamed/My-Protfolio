@@ -1,5 +1,5 @@
 import "./About.css";
-import logo from "../../../public/Hussien.png";
+import logo from "/hussien.png";
 import { motion } from "framer-motion";
 
 const About = () => {
