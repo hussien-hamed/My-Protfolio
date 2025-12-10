@@ -117,30 +117,33 @@ header .fixed {
     scale: 1;
   }
 }
-
 header .fixed ul.modal {
   animation: mymove 0.7s 1;
-  width: 75%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 2rem;
+  width: 90%; /* تغطي 90% من عرض الشاشة */
+  max-width: 400px; /* أقصى عرض */
+  margin: 2rem auto 0; /* top margin 2rem، وأفقياً بالمنتصف */
   border-radius: 1rem;
   padding: 1rem 2rem;
   background-color: var(--secondary);
+  display: flex;
+  flex-direction: column; /* لجعل العناصر عمودية */
+  position: relative; /* لتحديد موضع زر الإغلاق */
 }
 
 header .fixed ul.modal li {
-  border-bottom: 1px solid var(--border);
-  padding-bottom: 0.77rem;
-  padding-top: 0.5em;
+  border-bottom: 1px solid var(--border); /* الخط أسفل كل عنصر */
+  padding: 0.5em 0;
+  width: 100%;
+  text-align: center; /* الكلمات في المنتصف */
+  padding-top: 1rem; /* المسافة فوق الكلمة */
+  padding-bottom: 1rem; /* المسافة تحت الكلمة */
 }
 
 header .fixed ul.modal li:last-child {
-  border: none;
+  border-bottom: none; /* إزالة الخط عن آخر عنصر */
 }
 
 header .fixed ul.modal li:first-child {
-  text-align: right;
   border: none;
   padding-bottom: 0;
   padding-top: 0.2rem;
@@ -149,6 +152,26 @@ header .fixed ul.modal li:first-child {
 
 header .fixed ul.modal li a {
   font-size: 1rem;
+  display: block;
+  width: 100%;
+  text-align: center; /* الكلمات في المنتصف */
+}
+
+/* زر الإغلاق × */
+header .fixed .icon-close {
+  font-size: 1.5rem;
+  color: var(--subtitle);
+  transition: 0.3s;
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem; /* زاوية يمين أعلى */
+}
+
+header .fixed .icon-close:hover {
+  font-size: 1.7rem;
+  color: crimson;
+  rotate: 180deg;
 }
 
 /* ====================

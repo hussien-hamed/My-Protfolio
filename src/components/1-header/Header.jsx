@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 import "./Header.css";
 
 const Header = () => {
-  const [showModal, setshowModal] = useState(false);
-  const [theme, setsTheme] = useState(
+  const [showModal, setShowModal] = useState(false);
+  const [theme, setTheme] = useState(
     localStorage.getItem("currentMode") ?? "dark"
   );
 
@@ -18,24 +18,31 @@ const Header = () => {
     }
   }, [theme]);
 
+  const toggleTheme = () => {
+    const newMode = theme === "dark" ? "light" : "dark";
+    localStorage.setItem("currentMode", newMode);
+    setTheme(newMode);
+  };
+
   return (
     <motion.header
-      className="flex"
-      initial={{ y: -100, opacity: 0 }} // يبدأ من الأعلى
-      animate={{ y: 0, opacity: 1 }} // يتحرك إلى مكانه الطبيعي
+      className="flex header-container"
+      initial={{ y: -100, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 1, ease: "easeOut" }}
     >
-      {/* 👇 كلمة البروتفوليو */}
+      {/* Logo */}
       <div className="logo">Portfolio</div>
 
-      {/* 👇 زر القائمة */}
+      {/* Hamburger Menu */}
       <button
-        onClick={() => setshowModal(true)}
+        onClick={() => setShowModal(true)}
         className="menu icon-menu flex"
       />
 
+      {/* Desktop Navigation */}
       <nav>
-        <ul className="flex">
+        <ul className="flex nav-links">
           <li>
             <a href="/">Home</a>
           </li>
@@ -57,16 +64,8 @@ const Header = () => {
         </ul>
       </nav>
 
-      <button
-        onClick={() => {
-          localStorage.setItem(
-            "currentMode",
-            theme === "dark" ? "light" : "dark"
-          );
-          setsTheme(localStorage.getItem("currentMode"));
-        }}
-        className="mode flex"
-      >
+      {/* Theme Toggle */}
+      <button onClick={toggleTheme} className="mode flex">
         {theme === "dark" ? (
           <span className="icon-moon-o"></span>
         ) : (
@@ -74,29 +73,40 @@ const Header = () => {
         )}
       </button>
 
+      {/* Mobile Modal */}
       {showModal && (
-        <div className="fixed">
+        <div className="fixed modal-bg">
           <ul className="modal">
             <li>
               <button
                 className="icon-close"
-                onClick={() => setshowModal(false)}
+                onClick={() => setShowModal(false)}
               />
             </li>
             <li>
-              <a href="">About</a>
+              <a href="#About" onClick={() => setShowModal(false)}>
+                About
+              </a>
             </li>
             <li>
-              <a href="">Articals</a>
+              <a href="#skills" onClick={() => setShowModal(false)}>
+                Skills
+              </a>
             </li>
             <li>
-              <a href="">Projects</a>
+              <a href="#myproject" onClick={() => setShowModal(false)}>
+                Projects
+              </a>
             </li>
             <li>
-              <a href="">Speaking</a>
+              <a href="#Certificates" onClick={() => setShowModal(false)}>
+                Certificates
+              </a>
             </li>
             <li>
-              <a href="">Uses</a>
+              <a href="#contactus" onClick={() => setShowModal(false)}>
+                Contact
+              </a>
             </li>
           </ul>
         </div>
