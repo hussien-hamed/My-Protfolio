@@ -64,7 +64,7 @@ const Hero = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1.1 }}
             transition={{ damping: 8, type: "spring", stiffness: 100 }}
-            src="../../../public/Hussien.png"
+            src="/public/Hussien.png"
             alt=""
             className="avatar"
           />
