@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;600;700;900&display=swap");
+
+section.About {
+  margin-top: 3rem;
+  gap: 10rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+section.About .left-section-about {
+  max-width: 600px;
+  flex-grow: 1;
+}
+section.About h2 {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 3.3rem;
+  margin: 24px 0;
+  color: var(--subtitle);
+  font-family: "Alan Sans", sans-serif;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+}
+
+section.About h2::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 160%;
+  height: 2.2em;
+  background: rgba(0, 198, 255, 0.2);
+  z-index: -1;
+  border-radius: 40%;
+  filter: blur(15px);
+}
+
+section.About h2 span {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+section.About p.sub-title {
+  color: var(--subtitle);
+  font-size: 0.9rem;
+  line-height: 1.65rem;
+  margin-bottom: 32px;
+}
+section.About a.cv {
+  display: inline-block; /* ✅ هذا هو المفتاح */
+  font-family: "Alan Sans", sans-serif;
+  background: transparent;
+  border: 1px solid #00c6ff;
+  color: var(--subtitle);
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+section.About a.cv:hover {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* ==================== Right Section =================== */
+section.About .right-section-about {
+  width: 340px;
+  height: 340px;
+  position: relative;
+  overflow: visible;
+}
+.image-decor-container {
+  position: relative;
+  width: 370px;
+  height: 370px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* نحذف الدوائر ونحوّلها إلى خطوط مائلة */
+.image-decor-container::before,
+.image-decor-container::after {
+  content: "";
+  position: absolute;
+  width: 120px; /* طول الخط */
+  height: 120px; /* نفس الطول ليظهر على شكل زاوية */
+  border: 3px solid transparent;
+  z-index: 1;
+  border-radius: 0; /* لا نريد انحناء */
+}
+
+/* الخط العلوي الأيسر */
+.image-decor-container::before {
+  border-top-color: #0072ff;
+  border-left-color: #0072ff;
+  top: -10px;
+  left: 20px;
+  transform: rotate(0deg);
+}
+
+/* الخط السفلي الأيمن */
+.image-decor-container::after {
+  border-bottom-color: #00c6ff;
+  border-right-color: #00c6ff;
+  bottom: -25px;
+  right: 19px;
+  transform: rotate(0deg);
+}
+
+/* الصورة */
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  position: relative;
+  z-index: 2;
+}
+
+.about-image {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  position: relative;
+  z-index: 3;
+}
+
+/* ==================== Responsive =================== */
+@media (max-width: 1250px) {
+  section.About .right-section-about {
+    width: 200px;
+    height: 200px;
+  }
+  .image-decor-container {
+    width: 180px;
+    height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.About {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  section.About .right-section-about {
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+/* ==================== Responsive =================== */
+@media (max-width: 1250px) {
+  section.About .right-section-about {
+    display: none;
+  }
+  section.About {
+    margin-top: 3rem;
+    gap: 4rem;
+    justify-content: flex-start;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.About .left-section-about {
+    max-width: 900px;
+    flex-grow: 1;
+  }
+}
+@media (max-width: 768px) {
+  section.About {
+    flex-direction: column;
+    gap: 2rem;
+  }
+}

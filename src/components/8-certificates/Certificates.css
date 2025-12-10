@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Alan+Sans:wght@300;400;600;700;900&display=swap");
+
+/* ===== Container ===== */
+.containerr {
+  text-align: center;
+}
+
+.containerr .section-title {
+  position: relative;
+  display: inline-block;
+  font-size: 2rem;
+  line-height: 3.3rem;
+  margin: 24px 0;
+  color: var(--subtitle);
+  font-family: "Alan Sans", sans-serif;
+  padding: 0.5rem 1rem;
+  z-index: 1;
+}
+.containerr .section-title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  height: 2.6em;
+  background: rgba(0, 198, 255, 0.2);
+  z-index: -1;
+  border-radius: 40%;
+  filter: blur(15px);
+}
+
+.containerr .section-title span {
+  background: linear-gradient(90deg, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== Certificates Grid ===== */
+.cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 360px); /* عرض ثابت لكل كرت */
+  justify-content: center; /* لتوسيط الكروت في الصفحة */
+  gap: 25px;
+  margin-top: 30px;
+}
+
+/* ===== Certificate Card ===== */
+.certificate-card {
+  box-shadow: -1px 1px 1px rgba(0, 0, 0, 0.16), 1px 1px 1px rgba(0, 0, 0, 0.15);
+  border: 1px solid rgba(93, 188, 252, 0.3);
+  border-radius: 5px;
+  transition: 0.3s;
+  background-image: linear-gradient(
+    rgba(255, 255, 255, 0.05),
+    rgba(255, 255, 255, 0.05)
+  );
+
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.certificate-card:hover {
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-10px);
+}
+
+/* ===== Image Container ===== */
+.image-container {
+  width: 100%;
+  height: 190px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.thumbnail-image {
+  width: 100%; /* تغطي عرض الكرت بالكامل */
+  height: 100%; /* تغطي ارتفاع الحاوية */
+  object-fit: cover; /* تغطي بدون فراغات */
+  object-position: center;
+  display: block;
+}
+
+/* ===== Certificate Info ===== */
+.certificate-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.certificate-info h3 {
+  color: var(--title);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.certificate-info p {
+  font-size: 0.8rem;
+  color: var(--subtitle);
+  margin-bottom: 1rem;
+}
+
+.certificate-info span {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--subtitle);
+  margin-bottom: 10px;
+}
+
+/* ===== Buttons ===== */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+/* Buttons Hover */
+.download-btn,
+.view-btn {
+  font-family: "Alan Sans", sans-serif;
+  background: transparent;
+  border: 1px solid #00c6ff;
+  color: var(--subtitle);
+  padding: 0.5rem 0.8rem;
+  text-align: center;
+  font-size: 1.05rem;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.download-btn:hover,
+.view-btn:hover {
+  transform: scale(0.97);
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Modal ===== */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.modal-content img {
+  max-width: 100%;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
