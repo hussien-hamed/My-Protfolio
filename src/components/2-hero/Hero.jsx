@@ -10,6 +10,7 @@ import {
   faLinkedinIn,
   faGithub,
 } from "@fortawesome/free-brands-svg-icons";
+import logo from "/hussien.png";
 
 const Hero = () => {
   const lottieRef = useRef();
@@ -64,7 +65,7 @@ const Hero = () => {
             initial={{ scale: 0 }}
             animate={{ scale: 1.1 }}
             transition={{ damping: 8, type: "spring", stiffness: 100 }}
-            src="/public/Hussien.png"
+            src={logo}
             alt=""
             className="avatar"
           />
