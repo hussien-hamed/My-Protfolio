@@ -11,7 +11,7 @@ section.hero {
 /* ===== اليسار ===== */
 .left-section-hero {
   flex: 1;
-  min-width: 300px;
+  min-width: 250px;
 }
 
 /* ===== اليمين ===== */

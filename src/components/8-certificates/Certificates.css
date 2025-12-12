@@ -13,7 +13,7 @@
   margin: 24px 0;
   color: var(--subtitle);
   font-family: "Alan Sans", sans-serif;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   z-index: 1;
 }
 .containerr .section-title::before {
@@ -22,7 +22,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 120%;
+  width: 100%;
   height: 2.6em;
   background: rgba(0, 198, 255, 0.2);
   z-index: -1;
@@ -39,8 +39,8 @@
 /* ===== Certificates Grid ===== */
 .cert-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, 360px); /* عرض ثابت لكل كرت */
-  justify-content: center; /* لتوسيط الكروت في الصفحة */
+  grid-template-columns: repeat(auto-fit, 360px);
+  justify-content: center;
   gap: 25px;
   margin-top: 30px;
 }
@@ -55,7 +55,6 @@
     rgba(255, 255, 255, 0.05),
     rgba(255, 255, 255, 0.05)
   );
-
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -162,4 +161,15 @@
   max-height: 90vh;
   object-fit: contain;
   border-radius: 8px;
+}
+
+@media (max-width: 400px) {
+  .cert-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .certificate-card {
+    width: 100%;
+  }
 }

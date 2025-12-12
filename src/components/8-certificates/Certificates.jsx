@@ -11,7 +11,7 @@ const Certificates = () => {
       center: "Darrbeni Academy – Homs, Syria",
       date: "2023",
       logo: "/images/16.jpg",
-      image: "/images/darbni.jpg",
+      image: "/images/15.jpg",
     },
   ];
 
@@ -19,15 +19,9 @@ const Certificates = () => {
     <section className="certificates-section" id="Certificates">
       <div className="containerr">
         {/* ===== العنوان مع حركة ارتداد سلسة ===== */}
-        <motion.h2
-          className="section-title"
-          initial={{ y: -50, opacity: 0, scale: 0.8 }} // يبدأ صغيرًا ومتحرك قليلًا للأعلى
-          whileInView={{ y: 0, opacity: 1, scale: 1 }} // يتحرك للأسفل ويكبر تدريجيًا
-          transition={{ duration: 1.2, ease: "easeOut" }} // تكبير سلس وبطيء
-          viewport={{ once: true, amount: 0.3 }} // يبدأ التحريك عند ظهور 30% من العنصر
-        >
-          My <span>Certificates & Recommendations</span>
-        </motion.h2>
+        <h2 className="section-title">
+          <span>Certificates</span>
+        </h2>
 
         {/* ===== شبكة البطاقات ===== */}
         <div className="cert-grid">
