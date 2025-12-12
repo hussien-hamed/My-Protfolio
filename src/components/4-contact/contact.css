@@ -149,6 +149,12 @@ section.contact-us .submit:hover {
     width: 30%;
     align-self: center;
   }
+  section.contact-us .submit {
+    margin-left: 0;   /* نلغي أي مسافة قبل */
+    align-self: flex-start;
+    margin-top: 1.5rem;
+    margin-left: 1rem; /* ⬅️ نفس مسافة حقل الإدخال */
+  }
 }
 
 @media (max-width: 1250px) {
