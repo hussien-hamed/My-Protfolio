@@ -19,15 +19,15 @@
 .containerr .section-title::before {
   content: "";
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  top: 0;
+  left: 0;
   width: 100%;
-  height: 2.6em;
+  height: 100%;
   background: rgba(0, 198, 255, 0.2);
   z-index: -1;
-  border-radius: 40%;
+  border-radius: 50%;
   filter: blur(15px);
+  transform: scale(1.4);
 }
 
 .containerr .section-title span {
@@ -171,5 +171,20 @@
 
   .certificate-card {
     width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .containerr .section-title::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 198, 255, 0.2);
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(15px);
+    transform: scale(1.4);
   }
 }

@@ -190,4 +190,30 @@ header .fixed .icon-close:hover {
   header .logo {
     display: none;
   }
+  header.flex nav {
+    display: none;
+  }
+
+  header button.menu {
+    display: block;
+  }
+
+  header .logo {
+    display: none;
+  }
+
+  header button.mode {
+    margin-left: auto;
+    margin-right: 0.1rem;
+  }
+
+  header button.menu {
+    margin-right: auto;
+    margin-left: 0.1rem;
+  }
+
+  header.flex {
+    justify-content: space-between;
+    padding: 0 1.5rem;
+  }
 }

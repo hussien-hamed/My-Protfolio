@@ -43,4 +43,15 @@ footer.flex p {
     flex-direction: column;
     gap: 2rem;
   }
+  footer.flex {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center; /* ← يجعل الحقوق بالوسط */
+  }
+
+  footer.flex p {
+    font-size: 0.95rem; /* خط أوضح */
+    color: var(--subtitle);
+    margin-top: 0.5rem;
+  }
 }

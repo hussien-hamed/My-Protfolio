@@ -150,12 +150,6 @@ section.About .right-section-about {
     text-align: center; /* ← يجعل كل شيء في المنتصف */
   }
 
-  section.About h2::before {
-    width: 110%; /* ← بدل 160% */
-    height: 1.6em; /* ← أصغر من السابق */
-    filter: blur(10px); /* تصغير البلور */
-  }
-
   section.About h2 {
     margin-left: auto;
     margin-right: auto;
@@ -168,4 +162,12 @@ section.About .right-section-about {
     margin-left: auto;
     margin-right: auto;
   }
+
+  section.About h2 {
+    position: relative;
+    display: inline-block;
+    text-align: center;
+  }
+
+  
 }

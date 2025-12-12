@@ -13,7 +13,7 @@ import logo from "/hussien.png";
 
 const Hero = () => {
   const lottieRef = useRef();
-  const fullText = "Frontend Developer • React Specialist • Creative Coder";
+  const fullText = "Frontend Developer , React Specialist , Creative Coder";
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
