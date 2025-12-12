@@ -73,14 +73,6 @@ const Main = () => {
           >
             React & Typescript
           </button>
-          {/* <button
-            onClick={() => {
-              handleClick("node");
-            }}
-            className={currentActive === "node" ? "active" : null}
-          >
-            Node & Express
-          </button> */}
         </section>
 
         <section className=" flex right-section">
@@ -99,10 +91,7 @@ const Main = () => {
 
                   <div style={{ width: "266px" }} className="box">
                     <h1 className="title">{item.projectTitle}</h1>
-                    <p className="sub-title">
-                      Lorem ipsum dolor sit amet consectetur elit adipisicing .
-                      Ex tempore dolor
-                    </p>
+                    <p className="sub-title">{item.description}</p>
 
                     <div className="flex icons">
                       <a
