@@ -106,7 +106,7 @@ const Hero = () => {
             </a>
           ))}
         </div>
-        <a href="/Hussien_CV.docx" download className="cv">
+        <a href="/Hussien_resume.pdf" download className="cv">
           Download CV
         </a>
       </motion.div>
