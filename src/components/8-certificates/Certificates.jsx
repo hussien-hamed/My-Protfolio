@@ -11,7 +11,7 @@ const Certificates = () => {
       center: "Darrbeni Academy – Homs, Syria",
       date: "2023",
       logo: "/images/16.jpg",
-      image: "/images/15.jpg",
+      image: "/images/darbni.jpg",
     },
   ];
 
